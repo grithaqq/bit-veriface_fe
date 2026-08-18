@@ -1,0 +1,132 @@
+.container {
+  display: flex;
+  height: 100vh;
+  background-color: #f3f4f6;
+}
+
+.sidebar {
+  width: 256px;
+  background-color: white;
+  padding: 16px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.dropzone {
+  border: 2px dashed #d1d5db;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.dropzone:hover {
+  border-color: #3b82f6;
+}
+
+.button {
+  width: 100%;
+  background-color: #3b82f6;
+  color: white;
+  padding: 8px;
+  border-radius: 4px;
+  margin-top: 16px;
+  cursor: pointer;
+}
+
+.button:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.mainContent {
+  flex: 1;
+  padding: 32px;
+  overflow-y: auto;
+}
+
+.resultGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.resultItem {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.resultItem:hover {
+  transform: scale(1.05);
+}
+
+.uploadedImagePreview {
+  margin-top: 16px;
+  border: 2px solid #3b82f6;
+  border-radius: 8px;
+  padding: 4px;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.mainTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.error {
+  color: #ef4444;
+  margin-bottom: 16px;
+}
+
+.noResults {
+  color: #4b5563;
+}
+
+.resultId {
+  font-size: 0.875rem;
+  color: #4b5563;
+  padding: 8px;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  z-index: 50;
+}
+
+.modalContent {
+  background-color: white;
+  border-radius: 8px;
+  padding: 16px;
+  max-width: 600px;
+  width: 100%;
+  position: relative;
+}
+
+.closeButton {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #4b5563;
+}
+
+.closeButton:hover {
+  color: #1f2937;
+}
